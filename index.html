@@ -37,30 +37,33 @@
         <!-- Create a form here -->
 	<form>
 	  <fieldset>
-	    <legend>Sign up now!</legend>
 	    <div>
-	      <label for="name">Full Name:</label>
-	      <input id="name" type="text" name="name" autofocus="on" placeholder="Name" required/>
+	      <label for="location">Location</label>
+	      <input type="text" name="location" id="location" placeholder="Search Destination" required />
+	      
 	    </div>
 	    <div>
-	      <label for="password">Password:</label>
-	      <input id="password" type="password" name="password" min-length="8" placeholder="xxxxxxxx" required/>
+	      <label for="arrive">Arrive</label>
+	      <input type="date" name="arrive" id="arrive" placeholder="MM/DD/YYYY" required/>
 	    </div>
 	    <div>
-	      <label for="phone">Phone #:</label>
-	      <input id="phone" type="text" name="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="xxx-xxx-xxxx" required/>
+	      <label for="depart">Depart</label>
+	      <input type="date" name="depart" id="arrive" placeholder="MM/DD/YYYY" required/>
 	    </div>
 	    <div>
-	      <label for="email">Email:</label>
-	      <input id="email" type="text" name="email" placeholder="moneymoneymoney@gmail.com" required/>
-	      </div>
-	    <div>
-	      <label for="location">Zip Code:</label>
-	      <input id="location" type="text" name="zipcode" maxlength="5" placeholder="00000" required/>
+	      <label for="type">Type</label>
+	      <select name="type" id="type" size="1" required>
+		<option value="apartment">Apartment</option>
+		<option value="barn">Barn</option>
+		<option value="castle">Castle</option>
+		<option value="houseboat">Houseboat</option>
+		<option value="tiny-house">Tiny House</option>
+		<option value="yacht">Yacht</option>
+		<option value="yurt">Yurt</option>
+	      </select>
 	    </div>
-	    <div class="row">
+	    <div>
 	      <button type="submit">Submit</button>
-	      <button type="reset">Reset</button>
 	    </div>
 	  </fieldset>
 	</form>
@@ -73,42 +76,43 @@
           <img
             src="images/vacation-rental-pool.png"
             alt="Thinkfulbnb - Vacation rental pool"
+	    id="item"
             />
-
           <img
             src="images/vacation-rental-inside-stone.png"
             alt="Thinkfulbnb - Vacation rental inside stone"
+	    id="item"
             />
-	  </div>
-          <p>
+          <p id="item-double">
             Fusce porta odio nunc, eget pretium massa rutrum sit amet. Etiam
             fringilla aliquam dapibus. Maecenas quis nisi sed turpis aliquam
             porttitor eget ut quam. Sed vel scelerisque ex. Duis in pharetra
             neque, at tempus lorem. Aenean mi magna, posuere at quam sed, euismod
             gravida neque.
           </p>
+	  </div>
       </section>
 
       <!-- Ideas -->
       <section id="ideas">
         <h2>Ideas</h2>
-	<div class="row">
-	  <div class="col">
+	<div> 
+	  <div>
             <h3>Forest retreats</h3>
             <img
               src="images/forest-retreat.png"
               alt="Thinkfulbnb - Forest retreat"
               />
 	  </div>
-	  <div class="col">
+	  <div>
             <h3>Beaches</h3>
             <img src="images/beach-house.png" alt="Thinkfulbnb - Beach house" />
 	  </div>
-	  <div class="col">
+	  <div>
             <h3>Rustic cabins</h3>
             <img src="images/cabin.png" alt="Thinkfulbnb - Cabin" />
 	  </div>
-	  <div class="col">
+	  <div>
             <h3>Pet-friendly</h3>
             <img src="images/pet-friendly.png" alt="Thinkfulbnb - Pet-friendly" />
 	  </div>
@@ -117,7 +121,10 @@
 
       <!-- Host -->
       <section id="host" class="alternate-background">
+	<div>
+	  <div>
         <h2>Want to Become a Thinkfulbnb Host?</h2>
+	
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
           molestie in est id efficitur. Sed hendrerit ut turpis quis dapibus.
@@ -135,8 +142,11 @@
             hendrerit mauris.
           </li>
         </ul>
-
-        <img src="images/become-a-host.png" alt="Thinkfulbnb - Become a host" />
+	  </div>
+	  <div>
+            <img src="images/become-a-host.png" alt="Thinkfulbnb - Become a host" />
+	    </div>
+	</div>
       </section>
     </main>
 

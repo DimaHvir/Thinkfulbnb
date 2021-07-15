@@ -20,11 +20,6 @@ p {
   line-height: 1.5em;
   margin: 0;
 }
-fieldset {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
 section {
   padding: 20px;
 }
@@ -35,31 +30,18 @@ section.alternate-background {
   background-color: #00a699;
   color: #fff;
 }
-
 main img {
-    width: 100px;
+    width: 100%;
 }
 main section div img {
-    padding: 30px
+    padding: 10px 0
 }
 main section div {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-main section div div {
-    
+    flex-direction: column;
+    justify-content: center;
 }
 /* ---  Groups & Items --- */
-.row {
-    display:flex;
-    flex-direction: row;
-}
-.col {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
 .group {
   display: flex;
   flex-direction: column;
@@ -101,13 +83,13 @@ header nav ul {
     
 }
 header nav ul li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0 20px 0 0;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px 0 0;
 }
 
 header nav ul li a:hover {
@@ -137,7 +119,12 @@ form button {
   color: #fff;
   font-size: 24px;
   padding: 15px;
-  width: 30%;
+  width: 100%;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* -------  Footer ------- */
@@ -155,17 +142,56 @@ footer p {
 /* -------  Media Query ------- */
 @media all and (min-width: 800px) {
     main h2 {
-	font-size: 30px
+	font-size: 30px;
     }
     main h3 {
 	font-size: 25px;
     }
-    main img {
-	width: 300px;
+    main section div div img {
+	width: 100%;
     }
     main p {
 	padding: 0 15%;
 	font-size: 20px;
+	
+    }
+    main section div {
+	display: flex;
+	flex-direction: row;
+	align-items: space-between;
+	justify-content: space-around;
+	flex-wrap: wrap;
+    }
+    main section div div {
+	width: 50%;
+	flex-direction: column;
+	justify-content: center;
+	
+    }
+    .alternate-background div {
+	display: flex;
+	flex-direction: row;
+	align-items: space-around;
+	flex-wrap: nowrap;
+    }
+    .alternate-background div div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    }
+    main img {
+	width: 100%;
+	margin: 10px;
+    }
+    fieldset {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+    }
+    fieldset input {
+	width: 100%;
     }
     header {
 	display: flex;
