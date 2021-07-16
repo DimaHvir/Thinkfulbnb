@@ -33,9 +33,6 @@ section.alternate-background {
 main img {
     width: 100%;
 }
-main section div img {
-    padding: 10px 0
-}
 main section div {
     display: flex;
     flex-direction: column;
@@ -67,7 +64,7 @@ header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
-}z
+}
 
 .logo {
   font-family: "Pangolin", cursive;
@@ -124,7 +121,13 @@ form button {
 fieldset {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: space-between;
+    justify-content: space-between;
+}
+main fieldset div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 /* -------  Footer ------- */
@@ -140,7 +143,7 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 800px) {
+@media all and (min-width: 480px) {
     main h2 {
 	font-size: 30px;
     }
@@ -171,7 +174,6 @@ footer p {
     .alternate-background div {
 	display: flex;
 	flex-direction: row;
-	align-items: space-around;
 	flex-wrap: nowrap;
     }
     .alternate-background div div {
@@ -182,17 +184,9 @@ footer p {
     }
     main img {
 	width: 100%;
-	margin: 10px;
+	margin: 5px;
     }
-    fieldset {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-    }
-    fieldset input {
-	width: 100%;
-    }
+
     header {
 	display: flex;
 	justify-content: space-between;
@@ -209,5 +203,19 @@ footer p {
     header nav ul li a:hover {
 
     }
+    .item-double {
+	flex: 2;
+    }
     
+}
+@media all and (min-width: 800px) {
+    fieldset {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+    }
+    fieldset input {
+	width: 100%;
+    }
 }
