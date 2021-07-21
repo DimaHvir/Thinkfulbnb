@@ -51,7 +51,7 @@ main section div {
 
 .item {
   flex: 1;
-  margin: 10px;
+  margin: 5px;
 }
 
 .item-double {
@@ -107,7 +107,7 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 100%;
 }
 
 form button {
@@ -154,7 +154,7 @@ footer p {
 	width: 100%;
     }
     main p {
-	padding: 0 15%;
+	margin: 0 5%;
 	font-size: 20px;
 	
     }
@@ -187,26 +187,7 @@ footer p {
 	margin: 5px;
     }
 
-    header {
-	display: flex;
-	justify-content: space-between;
-	padding:30px 50px;
-	align-items: center;
-	
-    }
-    header nav ul li{
-	display: flex;
-	justify-content: center;
-	padding: 0 25px;
-	
-    }
-    header nav ul li a:hover {
 
-    }
-    .item-double {
-	flex: 2;
-    }
-    
 }
 @media all and (min-width: 800px) {
     fieldset {
@@ -217,5 +198,18 @@ footer p {
     }
     fieldset input {
 	width: 100%;
+    }
+        header {
+	display: flex;
+	justify-content: space-between;
+	padding:30px 50px;
+	align-items: center;
+	
+    }
+    header nav ul li{
+	display: flex;
+	justify-content: center;
+	padding: 0 5px;
+	
     }
 }
